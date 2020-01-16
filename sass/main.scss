@@ -1,0 +1,118 @@
+
+@use "use" as *; //@use rules must be written before any other rules.
+
+@import 'variables';
+@import 'mixin';
+
+
+body{
+  background-color: gray;
+}
+div{
+  h1{
+    color: $header-color;
+    text-align: center;
+  }
+  div{
+    text-align: center;
+    ul{
+      background-color: yellow;
+      li{
+//         list-style: none;
+        color: $color-list;
+        display: inline-block;
+      }
+    }
+  }
+  form{
+    padding: 20px;
+    max-width: 300px;
+    margin : 0px auto;
+    background-color: $color-white;
+    label{
+      color: $color-blue;
+    }
+    input[type=text]{
+      @include commonProperty;
+    }
+    input[type=password]{
+      @include commonProperty;
+    }
+    button{
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+div{
+  background-color: $color-white;
+  p{
+    @include mixin-practice;
+  }
+  div{
+    @include mixin-practice;
+  }
+}
+
+.global{
+  color: $global-color;
+}
+.local{
+  $local-color: #067C7A;
+  color: $local-color;
+}
+.global-local{
+  //color: $local-color;
+  color: $global-color;
+}
+.use{
+  @include rounded;
+  @include commonProperty;
+}
+
+@each $name, $color in $colors {
+  .#{$name} {
+    color: $color;
+  }
+}
+@each $tag, $size in $font-sizes {
+  #{$tag} {
+    font-size: $size;
+  }
+}
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@function sum($numbers...) {
+  $sum: 0;
+  @each $number in $numbers {
+    $sum: $sum + $number;
+  }
+  @return $sum;
+}
+
+.micro {
+  width: sum(150px, 30px);
+}
+
+.error {
+  border: 1px #f00;
+  background-color: $color-blue;
+
+  &--serious {
+    @extend .error;
+    border-width: 3px;
+  }
+}

@@ -1,0 +1,159 @@
+body {
+  background-color: gray;
+}
+
+div h1 {
+  color: #A569BD;
+  text-align: center;
+}
+div div {
+  text-align: center;
+}
+div div ul {
+  background-color: yellow;
+}
+div div ul li {
+  color: #FF4233;
+  display: inline-block;
+}
+div form {
+  padding: 20px;
+  max-width: 300px;
+  margin: 0px auto;
+  background-color: white;
+}
+div form label {
+  color: blue;
+}
+div form input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+div form input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+div form button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div {
+  background-color: white;
+}
+div p {
+  color: #95A5A6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+div div {
+  color: #95A5A6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+
+.global {
+  color: #5B2C6F;
+}
+
+.local {
+  color: #067C7A;
+}
+
+.global-local {
+  color: #5B2C6F;
+}
+
+.use {
+  border-radius: 3px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.youtube {
+  color: #D16E8D;
+}
+
+.articles {
+  color: #FFAC83;
+}
+
+.community {
+  color: #3F78C9;
+}
+
+.courses {
+  color: #49C4A3;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.micro {
+  width: 180px;
+}
+
+.error, .error--serious {
+  border: 1px #f00;
+  background-color: blue;
+}
+.error--serious {
+  border-width: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */

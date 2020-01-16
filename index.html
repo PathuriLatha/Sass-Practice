@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SASS Practice</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div>
+    <h1>SASS Practice</h1>
+
+    <div>
+      <ul>
+        <li>Login</li>
+        <li>Cancel</li>
+        <li>Home</li>
+      </ul>
+    </div>
+
+    <form>
+      <label>Name</label>
+      <input type="text" placeholder="Enter name"><br>
+      <label>Password</label>
+      <input type="password" placeholder="Enter password"><br>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <div>
+    <p>Sass with mixin - this is a paragraph tag</p>
+    <div href="#">sass with mixin - this is a div tag</div>
+  </div>
+
+  <div>
+    <p class="global">Variables declared at the top level of a stylesheet are global.</p>
+    <div class="local">Local variables can even be declared with the same name as a global variable.</div>
+    <p class="global-local">The !global flag may only be used to set a variable that has already been declared at the top level of a file. It may not be used to declare a new variable.</p>
+    <button class="use">Use</button>
+  </div>
+
+  <div>
+    <p>
+      <a class="youtube" href="#">Maps allow </a> any <a class="courses" href="#">Sass values</a> to be used as their keys. The <a class="community" href="#"> == operator </a>is used to determine whether <a class="articles" href="#">two keys </a> are the same.
+    </p>
+  </div>
+  <div>
+    <h2>Since maps aren’t valid CSS values, they don’t do much of anything on their own</h2>
+    <h3>That’s why Sass provides a bunch of functions to create maps and access the values they contain</h3>
+    <h4>Maps are all about associating keys and values</h4>
+    <h5>so naturally there’s a way to get the value associated with a key: the map.get($map, $key) function!</h5>
+    <h6>This function returns the value in the map associated with the given key. It returns null if the map doesn’t contain the key.</h6>
+  </div>
+  <div class="micro">
+    Argument lists can also be used to take arbitrary keyword arguments. The meta.keywords() function takes an argument list and returns any extra keywords that were passed to the function as a map from argument names (not including $) to those arguments’ values.
+  </div>
+  <div class="error error--serious">
+    Sass’s @extend rule solves this. It’s written @extend selector, and it tells Sass that one selector should inherit the styles of another.
+  </div>
+</body>
+</html>
