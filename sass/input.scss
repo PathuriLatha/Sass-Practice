@@ -1,0 +1,24 @@
+$theme-colors: (
+  "primary": #521751,
+  "danger": #b80c03
+);
+
+$border-radius: 10rem;
+
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/functions";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/variables";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/mixins";
+
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/grid";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/navbar";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/utilities";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/transitions";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/reboot";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/type";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/buttons";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/forms";
+
+.main-form {
+    width: 450px;
+    margin: auto;
+}

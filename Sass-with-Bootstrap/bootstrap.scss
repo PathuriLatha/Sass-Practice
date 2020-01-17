@@ -1,0 +1,41 @@
+
+$base-color: #c6538c;
+$border-dark: rgba($base-color, 0.88);
+h1{
+  color: color("pink");
+  text-align: center;
+}
+$theme-colors: (
+  "primary":  #521751,
+  "success": #239B56,
+  "warning": #6C3483
+);
+//$border-radius: 10rem;
+.alert{
+   border: 1px solid $border-dark;
+}
+
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/functions";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/variables";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/mixins";
+
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/navbar";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/utilities";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/transitions";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/reboot";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/type";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/forms";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/buttons";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/alert";
+
+form{
+  width: 450px;
+  margin : 0 auto;
+}
+button{
+  margin : 0 auto;
+//   position: absolute;
+//   left: 50%;
+}
+
+@debug 1 + 2 * 3 == 1 + (2 * 3); // true

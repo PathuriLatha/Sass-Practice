@@ -1,0 +1,93 @@
+$theme-colors: (
+  "primary": #521751,
+  "danger": #b80c03,
+  "dark":  #521751,
+  "success": #F6FA12
+);
+.custom-element {
+  color: theme-color-level(success, -100);
+}
+$border-radius: 20rem;
+/*
+.form-control {
+  border: $border-radius;
+}
+*/
+
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/functions";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/variables";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/mixins";
+
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/navbar";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/utilities";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/transitions";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/reboot";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/type";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/forms";
+@import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/buttons";
+
+
+.main-form{
+  width: 450px;
+  margin: auto;
+}
+
+a{
+  color: #12EFFA;
+  &:active,
+  &:focus{
+    color: #F6FA12;
+  }
+
+  &:visited{
+    color: #34495E;
+  }
+}
+
+.PColors{
+  background-color: color("pink");
+  color: color("white");
+  margin: auto;
+}
+%placeholder{
+  color: color("indigo");
+//   font-size: 20px;
+}
+.placeholderSelector {
+  @extend %placeholder;
+  font-size: 20px;
+}
+@mixin phone{
+  @media only screen and (max-width: 480px){
+    @content;
+  }
+}
+
+.main{
+  margin: 0 auto;
+  width: 65%;
+  color: #CB4335;
+  .header{
+    width: 80%;
+    margin: 0 auto;
+    height: 200px;
+  }
+  @include phone{
+    .header{
+//       width: $width;
+         width: 50%;
+         color: #229954;
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left   { text-align: left !important; }
+    .text#{$infix}-right  { text-align: right !important; }
+    .text#{$infix}-center { text-align: center !important; }
+  }
+
+}
