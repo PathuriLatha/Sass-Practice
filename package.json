@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "sass --watch sass/main.scss:css/style.css sass/input.scss:css/input.css sass/page.scss:css/page.css sass/alert.scss:css/alert.css sass/map.scss:css/map.css"
+    "compile:sass": "sass --watch sass/main.scss:css/style.css sass/input.scss:css/input.css sass/page.scss:css/page.css sass/alert.scss:css/alert.css sass/map.scss:css/map.css sass/debug.scss:css/debug.css"
 
   },
   "repository": {

@@ -1,5 +1,27 @@
 
 $base-color: #c6538c;
+
+@use "sass:string";
+
+@debug string.unquote(".widget:hover"); //display without quotes .widget:hover
+@debug string.quote("bold"); // display with quotes "bold"
+
+
+@debug "Helvetica Neue"; // string - display "Helvetica Neue"
+@debug "C:\\Program Files"; // string - display "C:\Program Files"
+@debug "\"Don't Fear \""; //string - display "\"Don't Fear\""
+@debug "line1\a line2"; //string - display two lines "line1\a line2"
+
+$roboto-variant: "StringQuoted";
+@debug "Roboto #{$roboto-variant}"; //string -  "Roboto StringQuoted"
+
+@debug 5.2e3; // numbers 5200
+@debug 6e-2; // numbers 0.06
+
+@debug if(true, 10px, 30px); //boolean 10px
+@debug if(false, 100px, 40px); //boolean 40px
+
+
 $border-dark: rgba($base-color, 0.88);
 h1{
   color: color("pink");
@@ -13,6 +35,28 @@ $theme-colors: (
 //$border-radius: 10rem;
 .alert{
    border: 1px solid $border-dark;
+}
+
+//$theme-colors: map-remove($theme-colors, "success", "info", "danger");
+
+@function color($key: "blue") {
+  @return map-get($colors, $key);
+}
+
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
+@function grayColor($key: "100") {
+  @return map-get($colors, $key);
+}
+
+div{
+  p{
+    color: white;
+    background-color: $base-color;
+    text-align: center;
+  }
 }
 
 @import "/home/sb-saikumar/Desktop/Practice/Sass-Practice/node_modules/bootstrap/scss/functions";
@@ -37,5 +81,29 @@ button{
 //   position: absolute;
 //   left: 50%;
 }
+@mixin inset-divider-offset($offset, $padding) {
+  $divider-offset: (2 * $padding) + $offset;
+  @debug "divider offset: #{$divider-offset}";
 
+  margin-left: $divider-offset;
+  width: calc(100% - #{$divider-offset});
+}
 @debug 1 + 2 * 3 == 1 + (2 * 3); // true
+
+@mixin avatar($size, $circle) {
+  width: $size;
+  height: $size;
+
+  @if $circle {
+    border-radius: $size / 2;
+  }
+}
+
+.square-av {
+  @include avatar(100px, $circle: false);
+}
+
+.circle-av {
+  @include avatar(100px, $circle: true);
+}
+
