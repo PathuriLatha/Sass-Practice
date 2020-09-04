@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/PathuriLatha/Sass-Practice#readme",
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   },
   "dependencies": {
     "bootstrap": "^4.4.1"
